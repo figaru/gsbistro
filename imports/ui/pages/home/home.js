@@ -2,10 +2,11 @@ import './home.html';
 
 import '../../components/hello/hello.js';
 import '../../components/info/info.js';
+import '../../components/menu/menu.js';
 import { type } from 'jquery';
 
 
-Template.App_home.onCreated(function(){
+Template.App_home.onCreated(function () {
     this.lang = new ReactiveVar();
 });
 Template.App_home.onRendered(function () {
@@ -14,20 +15,21 @@ Template.App_home.onRendered(function () {
     }, 1200); */
 
     let lang = localStorage.getItem('lang');
-    if (!lang || typeof lang == "undefined") {
+    if (!lang || typeof lang == "undefined" || lang == "undefined") {
+        localStorage.setItem("lang", "pt");
         this.lang.set("pt");
-        setTimeout(function(){
+        setTimeout(function () {
             $("#lang").click();
         }, 1200);
-    }else{
+    } else {
         this.lang.set(lang);
     }
-        
+
 
 });
 
 Template.App_home.events({
-    'click .js-select-lang': function(e, tmpl){
+    'click .js-select-lang': function (e, tmpl) {
         let lang = $(e.target).data("lang");
 
         localStorage.setItem("lang", lang);
@@ -37,10 +39,14 @@ Template.App_home.events({
 });
 
 Template.App_home.helpers({
-    'get_lang': function(check){
+    'lang': function(){
         let lang = Template.instance().lang.get();
 
-        console.log(lang);
+        return lang;
+    },  
+    'get_lang': function (check) {
+        let lang = Template.instance().lang.get();
+
         return check == lang ? true : false;
     }
 });
