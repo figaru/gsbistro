@@ -81,40 +81,40 @@
       </div>
     </section>
     <!-- Section -->
-    <div class="section py-0 p-1 pt-5">
+    <div class="section py-0 p-1 pt-6">
       <div class="container mt-n10">
         <div class="row">
           <div class="col-12">
-            <div class="card card-shadow p-5 border-light bg-white">
+            <div class="card card-shadow text-center p-3 pt-5 border-light bg-white">
               <h1>Gs Bistro</h1>
-              <p>
+              <p class="pb-3">
                 {{#if get_lang "en"}}
                 G's Bistro, with the signature of Chef Guy Doré, presents a sample of bistro french cuisine.
                 <br>
-                The challenge here is to present an experience in a mall that can go from "Croque Monsieur" to
+                <!-- The challenge here is to present an experience in a mall that can go from "Croque Monsieur" to
                 Sirloin "Tartare" cut with a knife, passing through the Oysters of Faro Island, a glass of Champagne,
                 the crunchy prawns, and end with "Tarte Tatin" or "Crème Brulée", with the aim of promoting
-                regional products, such as Algarve wine and Loulé craft beer, among others.
+                regional products, such as Algarve wine and Loulé craft beer, among others. -->
                 {{/if}}
 
                 {{#if get_lang "fr"}}
                 G's Bistro, avec la signature du chef Guy Doré, présente un échantillon de la cuisine bistro
                 Français. <br>
-                Le défi ici est de présenter une expérience dans un centre commercial qui peut aller de "Croque
+                <!-- Le défi ici est de présenter une expérience dans un centre commercial qui peut aller de "Croque
                 Monsieur" à Bife do
                 Surlonge "Tartare" coupé au couteau, passant à travers les Huîtres de l'île de Faro, une coupe de
                 Champagne, le
                 Estaladiço de Camarão, et supprimer "Tarte Tatin" ou "Crème Brulée", dans le but de promouvoir
-                des produits régionaux, comme le vin d'Algarve et la bière artisanale Loulé, entre autres.
+                des produits régionaux, comme le vin d'Algarve et la bière artisanale Loulé, entre autres. -->
                 {{/if}}
 
                 {{#if get_lang "pt"}}
                 O G's Bistro, com a assinatura do Chef Guy Doré, apresenta uma amostra da gastronomia de bistro
                 francês.<br>
-                Aqui o desafio é apresentar num shopping uma experiência que pode passar do "Croque Monsieur" ao Bife do
+                <!-- Aqui o desafio é apresentar num shopping uma experiência que pode passar do "Croque Monsieur" ao Bife do
                 Lombo "Tartare" cortado à faca, passando pelas Ostras da Ilha de Faro, um copo de Champagne, o
                 Estaladiço de Camarão, e acabar com a "Tarte Tatin" ou a "Crème Brulée", com o objectivo de promover os
-                produtos regionais, tal como o vinho do Algarve e a cerveja artesanal de Loulé, entre outros.
+                produtos regionais, tal como o vinho do Algarve e a cerveja artesanal de Loulé, entre outros. -->
                 {{/if}}
               </p>
 
@@ -139,7 +139,7 @@
                   </div>
                   <!-- End of Visit Box -->
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 text-center d-none d-md-block">
+                <div class="col-12 col-sm-4 col-md-4 text-center"><!-- d-none d-md-block -->
                   <!-- Call Box -->
                   <div class="icon-box mb-4">
                     <div class="icon icon-dark mb-4">
@@ -272,20 +272,23 @@
       <div class="modal" id="modal-menu" tabindex="-1" role="dialog" aria-labelledby="modal-menu" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content">
-            <div class="modal-header">
+            <!-- <div class="modal-header">
               <h5 class="modal-title">Menu</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
+            </div> -->
             <div class="modal-body">
               <!-- <p>Modal body text goes here.</p> -->
               {{>menu}}
             </div>
-            <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div> -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              {{#if get_lang "en"}}Close Menu{{/if}}
+              {{#if get_lang "fr"}}fermer le menu{{/if}}
+              {{#if get_lang "pt"}}Fechar o Menu{{/if}}
+            </button>
+            </div>
           </div>
         </div>
       </div>
