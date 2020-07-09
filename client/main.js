@@ -21,3 +21,8 @@ import "/imports/ui/vendor/vivus/dist/vivus.min.js";
 
 
 import '/imports/ui/scripts/pixel.js';
+
+import '/imports/ui/scripts/tweenMax.min.js';
+
+import '/imports/ui/scripts/morph.min.js';
+

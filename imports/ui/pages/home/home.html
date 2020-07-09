@@ -1,4 +1,16 @@
 <template name="App_home">
+  <div class="cookie-notice">
+    <div class="cookie-notice-flex">
+      <p>This site uses cookies to function properly. Any data collected is anonymised. By continuing to use this site,
+        you agree to our use of cookies.</p>
+
+      <span class="cookie-notice-dismiss">
+        <svg viewBox="0 0 24 24">
+          <path d="M 2 2 L 22 22 M 2 22 L22 2" />
+        </svg>
+      </span>
+    </div>
+  </div>
   {{get_lang}}
   <header class="header-global">
     <nav id="navbar-main" aria-label="Primary navigation"
@@ -117,7 +129,17 @@
                 produtos regionais, tal como o vinho do Algarve e a cerveja artesanal de Loulé, entre outros. -->
                 {{/if}}
               </p>
-
+              <!-- <div class="row mb-4">
+                <div class="col-12">
+                  <p></p>
+                  {{>notify}}
+                </div>
+              </div> -->
+              <!-- <div class="row">
+                <div class="col-12">
+                  {{>social}}
+                </div>
+              </div> -->
               <div class="row mb-4">
                 <div class="col-12 col-sm-4 col-md-4 text-center">
                   <!-- Visit Box -->
@@ -133,13 +155,15 @@
                       {{#if get_lang "pt"}}Visite-nos{{/if}}
                     </h2>
                     <span>
-                      Avenida Algarve Complexo Industrial IKEA
-                      8135-182 Almancil
+                      <a class="link-info" style="text-decoration: underline;" data-toggle="modal"
+                        data-target="#modal-map">Avenida Algarve Complexo Industrial IKEA
+                        8135-182 Almancil <i class="material-icons">explore</i></a>
                     </span>
                   </div>
                   <!-- End of Visit Box -->
                 </div>
-                <div class="col-12 col-sm-4 col-md-4 text-center"><!-- d-none d-md-block -->
+                <div class="col-12 col-sm-4 col-md-4 text-center">
+                  <!-- d-none d-md-block -->
                   <!-- Call Box -->
                   <div class="icon-box mb-4">
                     <div class="icon icon-dark mb-4">
@@ -168,10 +192,23 @@
                       </span>
                     </div>
                     <h2 class="h5 icon-box-title">Email</h2>
-                    <a href="#">guydoreedorelda@sapo.pt</a>
+                    <a href="mailto:guydoreedorelda@sapo.pt"
+                      style="text-decoration: underline;">guydoreedorelda@sapo.pt</a>
                   </div>
                   <!-- End of Email Box -->
                 </div>
+                <!-- <div class="col-12 col-sm-6 col-md-3 text-center">
+                  
+                  <div class="icon-box mb-4">
+                    <div class="icon icon-dark mb-4">
+                      <span class="material-icons">
+                        notifications
+                      </span>
+                    </div>
+                    <h2 class="h5 icon-box-title">Notificações</h2>
+                    {{>notify}}
+                  </div>
+                </div> -->
               </div>
 
             </div>
@@ -179,6 +216,9 @@
         </div>
       </div>
     </div>
+    <section class="pt-5">
+      {{>social}}
+    </section>
     <section>
       <button id="promo" type="button" hidden class="btn btn-primary mb-3" data-toggle="modal"
         data-target="#modal-promo">Subscribe</button>
@@ -211,7 +251,34 @@
         </div>
       </div>
     </section>
+    <section class="subscription-details js-subscription-details is-invisible">
+      <pre><code class="js-subscription-json" style="display: none"></code></pre>
+    </section>
     <!-- End of Section -->
+    <section>
+      <div class="modal" id="modal-map" tabindex="-1" role="dialog" aria-labelledby="modal-map" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12"><iframe class="map rounded" style="filter: none;" title="map" id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1591.1406112538766!2d-7.998064367138013!3d37.098422735467246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAvenida%20Algarve%20Complexo%20Industrial%20IKEA%208135-182%20Almancil!5e0!3m2!1sen!2spt!4v1593161038077!5m2!1sen!2spt"></iframe>
+
+
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                {{#if get_lang "en"}}Close Map{{/if}}
+                {{#if get_lang "fr"}}fermer la Carte{{/if}}
+                {{#if get_lang "pt"}}Fechar o Mapa{{/if}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section py-0">
       <div class="container">
         <div class="row">
@@ -233,8 +300,9 @@
                   confecionados aqui no G'S
                   Bistro.{{/if}}
                 </p>
-                <a class="btn btn-lg btn-primary text-white mr-md-3 mb-3 mb-sm-0 animate-up-1"
-                  download="gsbistro_takeaway_{{lang}}.pdf" href="/img/gsbistro_takeaway_{{lang}}.pdf">
+                <a class="btn btn-lg btn-primary text-white mr-md-3 mb-3 mb-sm-0 animate-up-1" data-toggle="modal"
+                  data-target="#modal-takeaway">
+                  <!-- download="gsbistro_takeaway_{{lang}}.pdf" href="/img/gsbistro_takeaway_{{lang}}.pdf" -->
                   <div class="d-flex align-items-center">
                     <!-- <span class="icon icon-lg mr-3"><i class="fab fa-apple"></i></span> -->
                     <div class="d-block">
@@ -284,69 +352,49 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">
-              {{#if get_lang "en"}}Close Menu{{/if}}
-              {{#if get_lang "fr"}}fermer le menu{{/if}}
-              {{#if get_lang "pt"}}Fechar o Menu{{/if}}
-            </button>
+                {{#if get_lang "en"}}Close Menu{{/if}}
+                {{#if get_lang "fr"}}fermer le menu{{/if}}
+                {{#if get_lang "pt"}}Fechar o Menu{{/if}}
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="modal modal-full fade" id="modal-menu" tabindex="-1" role="dialog" aria-labelledby="modal-menu"
+    </section>
+
+    <section>
+      <div class="modal" id="modal-takeaway" tabindex="-1" role="dialog" aria-labelledby="modal-takeaway"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content" style="width: 100vw; height: 100vh;">
-            <div class="modal-header">
-              <h6 class="modal-title">Escolha o idioma</h6>
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title">Menu</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
-            <div class="modal-body text-center">
-              <div class="row">
-                <div class="col-12">
-                  
-                </div>
-              </div>
+            </div> -->
+            <div class="modal-body">
+              <!-- <p>Modal body text goes here.</p> -->
+              <!-- <img src="/img/gsbistro_takeaway_{{lang}}.jpg" style="width: 100%;"> -->
 
+              {{>takeaway}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                {{#if get_lang "en"}}Close Menu{{/if}}
+                {{#if get_lang "fr"}}fermer le menu{{/if}}
+                {{#if get_lang "pt"}}Fechar o Menu{{/if}}
+              </button>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </section>
     <!-- Section -->
     <div class="section section-md">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <!-- Carousel -->
-            <!-- <div id="Carousel2" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100 rounded"
-                    src="https://scontent.flis5-1.fna.fbcdn.net/v/t1.0-9/p960x960/104422360_4247554198595718_936536084746929997_o.jpg?_nc_cat=102&_nc_sid=2d5d41&_nc_ohc=lAhOokV0q54AX8snKP5&_nc_ht=scontent.flis5-1.fna&_nc_tp=6&oh=80d72bfffa78e98390af70ef49e59ee1&oe=5F101414"
-                    alt="First slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100 rounded"
-                    src="https://devxop.com/cfs/files/images/nyjvBFbvcYhDFu66z?token=eyJhdXRoVG9rZW4iOiJwUk1kQWowd3d2VlpTUFZCa0hQSWt2ZjEwWTBxaWg5eUNOV253UkJiNzc4In0%3D?1592409352835"
-                    alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100 rounded"
-                    src="https://devxop.com/cfs/files/images/GWpHrqwzT2tt3cBbo?token=eyJhdXRoVG9rZW4iOiJwUk1kQWowd3d2VlpTUFZCa0hQSWt2ZjEwWTBxaWg5eUNOV253UkJiNzc4In0%3D?1592409369997"
-                    alt="Third slide">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#Carousel2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Preview item</span>
-              </a>
-              <a class="carousel-control-next" href="#Carousel2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next Item</span>
-              </a>
-            </div> -->
             <div id="Carousel3" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#Carousel3" data-slide-to="0" class="active"></li>
@@ -398,5 +446,6 @@
       </div>
     </section> -->
     <!-- End of section -->
+
   </main>
 </template>

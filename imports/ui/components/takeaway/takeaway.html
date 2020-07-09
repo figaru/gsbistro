@@ -1,0 +1,169 @@
+<template name="takeaway">
+    <div class="row">
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <div class="card-header bg-white">
+                    <img src="/img/t_chili.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        7.50€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Chilli con Carne and Basmati Rice{{/if}}
+                        {{#if get_lang "fr"}}Chili com carne avec Riz Basmati{{/if}}
+                        {{#if get_lang "pt"}}Chili com carne e Arroz Basmati{{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <div class="card-header bg-white">
+                    <img src="/img/t_frango.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        10.50€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Chicken "Émincé", Porto & Mushroom Cream Sauce and Basmati Rice{{/if}}
+                        {{#if get_lang "fr"}}Émincé de Poulet, Sauce Crème au Porto & Champignons et Riz Basmati{{/if}}
+                        {{#if get_lang "pt"}}Tiras de Frango, Molho com Natas, Porto, Cogumelos e Arroz Basmati{{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <div class="card-header bg-white">
+                    <img src="/img/t_pato.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        11.50€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Duck Leg Confit with Sweet Potato and Pumpkin{{/if}}
+                        {{#if get_lang "fr"}}Cuisse de Canard confite avec Patates Douces et Potiron{{/if}}
+                        {{#if get_lang "pt"}}Perna de Pato Confitado, Batata doce e Abóbora{{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <div class="card-header bg-white">
+                    <img src="/img/t_salmao.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        10.50€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Salmon Filet, Leek "Fondue" with Cream & White Wine Sauce and Basmati
+                        Rice{{/if}}
+                        {{#if get_lang "fr"}}Filet de Saumon, Fondue de Poireaux dans une Sauce Crème et Vin Blank avec
+                        Riz Basmati{{/if}}
+                        {{#if get_lang "pt"}}Lombo de Salmão, "Fondue" de Alho Francês com Natas e Vinho Branco e Arroz
+                        Basmati{{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <div class="card-header bg-white">
+                    <img src="/img/t_robalo.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        10.50€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Sea Bass Filet with Ratatouille and Basmati Rice{{/if}}
+                        {{#if get_lang "fr"}}Filet de Loup avec Ratatouille et Riz Basmati{{/if}}
+                        {{#if get_lang "pt"}}Filete de Robalo com Ratatouille e Arroz Basmati{{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <div class="card-header bg-white">
+                    <img src="/img/t_fumado.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        7.50€ / 100g
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Smoked Salmon{{/if}}
+                        {{#if get_lang "fr"}}Coeur Saumon Fumé{{/if}}
+                        {{#if get_lang "pt"}}Lombo de Salmão Fumado{{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <h3 class="text-uppercase">
+                {{#if get_lang "fr"}}
+                    Suppléments
+                {{else}}
+                    Extras
+                {{/if}}</h3>
+            <hr>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <!-- <div class="card-header bg-white">
+                    <img src="/img/t_robalo.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div> -->
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        1.00€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Basmati Rice (150 gr){{/if}}
+                        {{#if get_lang "fr"}}Riz Basmati (150 gr){{/if}}
+                        {{#if get_lang "pt"}}Arroz Basmati (150 gr){{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <!-- <div class="card-header bg-white">
+                    <img src="/img/t_robalo.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div> -->
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        1.50€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Ratatouille (170 gr){{/if}}
+                        {{#if get_lang "fr"}}Ratatouille (170 gr){{/if}}
+                        {{#if get_lang "pt"}}Ratatouille (170 gr){{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <!-- <div class="card-header bg-white">
+                    <img src="/img/t_robalo.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div> -->
+                <div class="card-body">
+                    <h4 class="card-title mt-2">
+                        1.50€
+                    </h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Sweet Potato and Pumpkin (170 gr){{/if}}
+                        {{#if get_lang "fr"}}Patataes Douces et Potiron (170 gr){{/if}}
+                        {{#if get_lang "pt"}}Batata Doce e Abóbora (170 gr){{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

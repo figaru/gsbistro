@@ -1,8 +1,7 @@
-import './menu.html';
+import './takeaway.html';
 
 
-
-Template.menu.helpers({
+Template.takeaway.helpers({
     'lang': function(){
         return Session.get("lang");
     },  

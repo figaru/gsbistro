@@ -1,7 +1,12 @@
 <template name="menu">
     <div class="row">
         <div class="col-12">
-            <h3>Entradas/Snacks</h3>
+            <h3 class="text-uppercase">
+                {{#if get_lang "en"}}Starters / Snacks{{/if}}
+                {{#if get_lang "pt"}}Entradas / Snacks{{/if}}
+                {{#if get_lang "fr"}}Entrées / Snacks{{/if}}
+            </h3>
+            <hr>
         </div>
         <div class="col-xs-6 col-md-4 col-lg-4">
             <div class="card text-center">
@@ -10,7 +15,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        11.50€
+                        11.50€ - 375Kcal
                     </span>
                     <h4 class="card-title mt-2">Salade du chef</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -27,7 +32,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        5.90€
+                        5.90€ - 316kcal
                     </span>
                     <h4 class="card-title mt-2">G'S Patê</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -44,7 +49,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        11.80€
+                        11.80€ - 490kcal
                     </span>
                     <h4 class="card-title mt-2">Crevette Provençal</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -59,7 +64,29 @@
     <!-- PEIXE / MARISCO -->
     <div class="row">
         <div class="col-12">
-            <h3>Peixe/Marisco</h3>
+            <h3 class="text-uppercase">
+                {{#if get_lang "en"}}Fish / Seafood{{/if}}
+                {{#if get_lang "pt"}}Peixe / Marisco{{/if}}
+                {{#if get_lang "fr"}}Poissons / Fruits de Mer{{/if}}
+            </h3>
+            <hr>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <div class="card text-center">
+                <div class="card-header bg-white">
+                    <img src="/img/fumado.jpg" class="card-img-top rounded shadow border-0" alt="image">
+                </div>
+                <div class="card-body">
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        11.50€ - 349kcal
+                    </span>
+                    <h4 class="card-title mt-2">Salade Saumon Fumé</h4>
+                    <span class="card-subtitle text-gray font-weight-normal">
+                        {{#if get_lang "en"}}Potato salad with sliced smoked salmon fillet{{/if}}
+                        {{#if get_lang "pt"}}Salada de batata com lombo de salmao fumado fatiado{{/if}}
+                    </span>
+                </div>
+            </div>
         </div>
         <div class="col-xs-6 col-md-4 col-lg-4">
             <div class="card text-center">
@@ -68,7 +95,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        12.80€
+                        12.80€ - 360kcal
                     </span>
                     <h4 class="card-title mt-2">Ratatouille Au Loup De Mer</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -85,7 +112,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        11.80€
+                        11.80€ - 486kcal
                     </span>
                     <h4 class="card-title mt-2">Moules Frites</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -99,7 +126,12 @@
     <!-- Vegetariano -->
     <div class="row">
         <div class="col-12">
-            <h3>Vegetariano</h3>
+            <h3 class="text-uppercase">
+                {{#if get_lang "en"}}Vegetarian{{/if}}
+                {{#if get_lang "pt"}}Vegetariano{{/if}}
+                {{#if get_lang "fr"}}végétarienne{{/if}}
+            </h3>
+            <hr>
         </div>
         <div class="col-xs-6 col-md-4 col-lg-4">
             <div class="card text-center">
@@ -108,7 +140,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        7.80€
+                        7.80€ - 350kcal
                     </span>
                     <h4 class="card-title mt-2">Ratatouille Au L'oeuf</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -123,7 +155,12 @@
     <!-- Carnes -->
     <div class="row">
         <div class="col-12">
-            <h3>Carnes</h3>
+            <h3 class="text-uppercase">
+                {{#if get_lang "en"}}Meat{{/if}}
+                {{#if get_lang "pt"}}Carnes{{/if}}
+                {{#if get_lang "fr"}}Viande{{/if}}
+            </h3>
+            <hr>
         </div>
         <div class="col-xs-6 col-md-4 col-lg-4">
             <div class="card text-center">
@@ -132,7 +169,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        14.50€
+                        14.50€ - 462kcal
                     </span>
                     <h4 class="card-title mt-2">Confit De Canard</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -149,7 +186,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        16.80€
+                        16.80€ - 464kcal
                     </span>
                     <h4 class="card-title mt-2">Tartare De Boeuf</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -166,7 +203,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        15.80€
+                        15.80€ - 534kcal
                     </span>
                     <h4 class="card-title mt-2">Bavette À L'Échalote</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -181,7 +218,12 @@
     <!-- Sobremesas -->
     <div class="row">
         <div class="col-12">
-            <h3>Sobremesas</h3>
+            <h3 class="text-uppercase">
+                {{#if get_lang "en"}}Desserts{{/if}}
+                {{#if get_lang "pt"}}Sobremesas{{/if}}
+                {{#if get_lang "fr"}}Desserts{{/if}}
+            </h3>
+            <hr>
         </div>
         <div class="col-xs-6 col-md-4 col-lg-4">
             <div class="card text-center">
@@ -190,7 +232,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        4.50€
+                        4.50€ - 277kcal
                     </span>
                     <h4 class="card-title mt-2">Tarte Tatin</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -207,7 +249,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        4.80€
+                        4.80€ - 289kcal
                     </span>
                     <h4 class="card-title mt-2">Crème Brûlée</h4>
                     <span class="card-subtitle text-gray font-weight-normal">
@@ -224,7 +266,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        4.80€
+                        4.80€ - 413kcal
                     </span>
                     <h4 class="card-title mt-2">Profiteroles Au Chocolat</h4>
                     {{#if get_lang "en"}}Profiteroles with vanilla icecream and chocolate sauce{{/if}}
@@ -239,7 +281,7 @@
                 </div>
                 <div class="card-body">
                     <span class="card-subtitle text-gray font-weight-normal">
-                        4.80€
+                        4.80€ - 271kcal
                     </span>
                     <h4 class="card-title mt-2">Café Gourmand</h4>
                     {{#if get_lang "en"}}Sweet coffee{{/if}}
