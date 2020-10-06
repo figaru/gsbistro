@@ -6,6 +6,8 @@ import '../../components/menu/menu.js';
 import '../../components/social/social.js';
 import '../../components/takeaway/takeaway.js';
 
+import '../../components/champagne/champagne.js';
+
 
 import './notify';
 import { type } from 'jquery';

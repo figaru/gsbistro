@@ -141,8 +141,8 @@
                 </div>
               </div> -->
               <div class="row mb-4">
-                <div class="col-12 col-sm-4 col-md-4 text-center">
-                  <!-- Visit Box -->
+                <!-- <div class="col-12 col-sm-4 col-md-4 text-center">
+                  
                   <div class="icon-box mb-4">
                     <div class="icon icon-dark mb-4">
                       <span class="material-icons">
@@ -160,9 +160,9 @@
                         8135-182 Almancil <i class="material-icons">explore</i></a>
                     </span>
                   </div>
-                  <!-- End of Visit Box -->
-                </div>
-                <div class="col-12 col-sm-4 col-md-4 text-center">
+                  
+                </div> -->
+                <div class="col-12 col-sm-6 col-md-6 text-center">
                   <!-- d-none d-md-block -->
                   <!-- Call Box -->
                   <div class="icon-box mb-4">
@@ -177,13 +177,13 @@
                       {{#if get_lang "pt"}}Contate-nos{{/if}}
                     </h2>
                     <span>93 42 42 717</span>
-                    <div class="text-small text-gray">
+                    <!-- <div class="text-small text-gray">
                       Mon - Sun, 11am - 10pm
-                    </div>
+                    </div> -->
                   </div>
                   <!-- End of Call Box -->
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 text-center">
+                <div class="col-12 col-sm-6 col-md-6 text-center">
                   <!-- Email Box -->
                   <div class="icon-box mb-4">
                     <div class="icon icon-dark mb-4">
@@ -292,19 +292,17 @@
                 </h2>
               </div>
               <div class="card-body pt-2 px-0 px-lg-7">
-                <p class="mb-5 lead">
+                <!-- <p class="mb-5 lead">
                   {{#if get_lang "en"}}Download our menus to view our delicious dishes made here at G'S Bistro.{{/if}}
                   {{#if get_lang "fr"}}Téléchargez nos menus pour voir nos délicieux plats préparés ici au G'S
                   Bistro.{{/if}}
                   {{#if get_lang "pt"}}Faça download das nossas ementas para visualizar os nossos pratos deliciosos
                   confecionados aqui no G'S
                   Bistro.{{/if}}
-                </p>
-                <a class="btn btn-lg btn-primary text-white mr-md-3 mb-3 mb-sm-0 animate-up-1" data-toggle="modal"
+                </p> -->
+                <!-- <a class="btn btn-lg btn-primary text-white mr-md-3 mb-3 mb-sm-0 animate-up-1" data-toggle="modal"
                   data-target="#modal-takeaway">
-                  <!-- download="gsbistro_takeaway_{{lang}}.pdf" href="/img/gsbistro_takeaway_{{lang}}.pdf" -->
                   <div class="d-flex align-items-center">
-                    <!-- <span class="icon icon-lg mr-3"><i class="fab fa-apple"></i></span> -->
                     <div class="d-block">
                       <small class="font-small">
                         {{#if get_lang "en"}}Take it home{{/if}}
@@ -314,12 +312,11 @@
                       <div class="h5 mb-0">Take Away</div>
                     </div>
                   </div>
-                </a>
+                </a> -->
                 <!-- download="gsbistro_menu2.jpg"
                   href="/img/menu_p2.jpg" -->
-                <a class="btn btn-lg btn-primary text-white animate-up-1" data-toggle="modal" data-target="#modal-menu">
+                <!-- <a class="btn btn-lg btn-primary text-white animate-up-1" data-toggle="modal" data-target="#modal-menu">
                   <div class="d-flex align-items-center">
-                    <!-- <span class="icon icon-lg mr-3"><i class="fab fa-google-play"></i></span> -->
                     <div class="d-block">
                       <small class="font-small">
                         {{#if get_lang "en"}}Eat at our restaurant{{/if}}
@@ -327,6 +324,20 @@
                         {{#if get_lang "pt"}}Coma no restaurante{{/if}}
                       </small>
                       <div class="h5 mb-0">Menu</div>
+                    </div>
+                  </div>
+                </a> -->
+
+                <a class="btn btn-lg btn-primary text-white animate-up-1" data-toggle="modal" data-target="#modal-champagne">
+                  <div class="d-flex align-items-center">
+                    <!-- <span class="icon icon-lg mr-3"><i class="fab fa-google-play"></i></span> -->
+                    <div class="d-block">
+                      <small class="font-small">
+                        {{#if get_lang "en"}}Exclusive Champagne{{/if}}
+                        {{#if get_lang "fr"}}Champagne exclusif{{/if}}
+                        {{#if get_lang "pt"}}Champanhe exclusivo{{/if}}
+                      </small>
+                      <div class="h5 mb-0">René Jolly</div>
                     </div>
                   </div>
                 </a>
@@ -349,6 +360,32 @@
             <div class="modal-body">
               <!-- <p>Modal body text goes here.</p> -->
               {{>menu}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                {{#if get_lang "en"}}Close Menu{{/if}}
+                {{#if get_lang "fr"}}fermer le menu{{/if}}
+                {{#if get_lang "pt"}}Fechar o Menu{{/if}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="modal" id="modal-champagne" tabindex="-1" role="dialog" aria-labelledby="modal-champagne" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title">Menu</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> -->
+            <div class="modal-body">
+              <!-- <p>Modal body text goes here.</p> -->
+              {{>champagne}}
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">
